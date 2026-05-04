@@ -12,25 +12,75 @@
     header {
       position: sticky;
       top:0;
-      background:white;
-      border-bottom:1px solid #ddd;
+      background:rgba(255,255,255,0.96);
+      border-bottom:1px solid #e1ece7;
+      box-shadow:0 6px 20px rgba(0,0,0,0.06);
       z-index:10;
     }
 
     .nav {
-      max-width:1100px;
+      max-width:1200px;
       margin:auto;
       display:flex;
       justify-content:space-between;
       align-items:center;
-      padding:15px;
+      padding:12px 22px;
+      gap:25px;
+    }
+
+    .brand {
+      display:flex;
+      align-items:center;
+      gap:12px;
+      text-decoration:none;
+      color:#123f4a;
+    }
+
+    .brand img {
+      height:62px;
+      width:62px;
+      object-fit:cover;
+      border-radius:50%;
+    }
+
+    .brand strong {
+      display:block;
+      font-size:21px;
+      color:#195f6f;
+    }
+
+    .brand span {
+      display:block;
+      font-size:13px;
+      color:#5b7b72;
+      font-weight:bold;
+    }
+
+    nav {
+      display:flex;
+      gap:6px;
+      align-items:center;
     }
 
     nav a {
-      margin:0 10px;
+      padding:10px 13px;
       text-decoration:none;
       font-weight:bold;
       color:#195f6f;
+      border-radius:999px;
+    }
+
+    nav a:hover {
+      background:#eaf6f0;
+    }
+
+    .call-btn {
+      padding:12px 18px;
+      background:#195f6f;
+      color:white;
+      text-decoration:none;
+      border-radius:999px;
+      font-weight:bold;
     }
 
     section {
@@ -58,12 +108,17 @@
       left:0;
       width:100%;
       height:100%;
-      background:rgba(0,0,0,0.4);
+      background:rgba(0,0,0,0.45);
     }
 
     .hero-content {
       position:relative;
       z-index:2;
+    }
+
+    .hero h1 {
+      font-size:48px;
+      margin-bottom:10px;
     }
 
     .btn {
@@ -107,9 +162,13 @@
 
 <header>
   <div class="nav">
-    <div>
-      <img src="logo.jpg" style="height:50px;">
-    </div>
+    <a href="#uvod" class="brand">
+      <img src="logo.jpg" alt="logo">
+      <div>
+        <strong>Střechy Proděc</strong>
+        <span>Pokrývačské služby</span>
+      </div>
+    </a>
 
     <nav>
       <a href="#uvod">Úvod</a>
@@ -118,6 +177,8 @@
       <a href="#realizace">Realizace</a>
       <a href="#kontakt">Kontakt</a>
     </nav>
+
+    <a class="call-btn" href="tel:+420601343327">Zavolat</a>
   </div>
 </header>
 
