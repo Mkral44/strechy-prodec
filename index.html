@@ -74,9 +74,7 @@
       white-space:nowrap;
     }
 
-    nav a:hover {
-      background:#eaf6f0;
-    }
+    nav a:hover { background:#eaf6f0; }
 
     .call-btn {
       padding:12px 18px;
@@ -110,11 +108,11 @@
 
     .overlay {
       position:absolute;
-      top:0;
-      left:0;
-      width:100%;
-      height:100%;
-      background:rgba(0,0,0,0.48);
+      inset:0;
+      background:linear-gradient(
+        rgba(0,0,0,0.75),
+        rgba(0,0,0,0.55)
+      );
       pointer-events:none;
     }
 
@@ -122,22 +120,26 @@
       position:relative;
       z-index:2;
       padding:0 20px;
-      max-width:850px;
+      max-width:900px;
     }
 
     .hero h1 {
       font-size:58px;
-      margin:0 0 14px;
+      margin:0 0 16px;
       line-height:1.05;
+      text-shadow:0 5px 25px rgba(0,0,0,0.75);
     }
 
     .hero p {
       font-size:22px;
       margin:0;
+      color:white;
+      text-shadow:0 3px 14px rgba(0,0,0,0.75);
+      font-weight:600;
     }
 
     .benefits {
-      margin-top:24px;
+      margin-top:26px;
       display:flex;
       gap:14px;
       justify-content:center;
@@ -146,24 +148,25 @@
     }
 
     .benefits div {
-      background:rgba(255,255,255,0.18);
-      border:1px solid rgba(255,255,255,0.25);
+      background:rgba(0,0,0,0.42);
+      border:1px solid rgba(255,255,255,0.42);
       padding:10px 16px;
       border-radius:999px;
       font-size:15px;
-      backdrop-filter: blur(6px);
+      backdrop-filter: blur(4px);
+      box-shadow:0 8px 22px rgba(0,0,0,0.25);
     }
 
     .btn {
       display:inline-block;
-      margin-top:28px;
-      padding:14px 24px;
+      margin-top:30px;
+      padding:15px 26px;
       background:#195f6f;
       color:white;
       text-decoration:none;
       border-radius:999px;
       font-weight:bold;
-      box-shadow:0 10px 25px rgba(0,0,0,0.22);
+      box-shadow:0 12px 30px rgba(0,0,0,0.35);
     }
 
     .btn:hover,
@@ -245,9 +248,7 @@
         width:54px;
       }
 
-      .brand strong {
-        font-size:19px;
-      }
+      .brand strong { font-size:19px; }
 
       nav {
         width:100%;
@@ -259,26 +260,17 @@
         padding:8px 10px;
       }
 
-      .call-btn {
-        display:none;
-      }
+      .call-btn { display:none; }
 
       .hero {
         height:calc(100vh - 150px);
         min-height:540px;
       }
 
-      .hero h1 {
-        font-size:40px;
-      }
+      .hero h1 { font-size:40px; }
+      .hero p { font-size:18px; }
 
-      .hero p {
-        font-size:18px;
-      }
-
-      section {
-        padding:55px 18px;
-      }
+      section { padding:55px 18px; }
     }
 
     @media (max-width: 480px) {
@@ -287,13 +279,8 @@
         width:48px;
       }
 
-      .brand strong {
-        font-size:18px;
-      }
-
-      .brand span {
-        font-size:12px;
-      }
+      .brand strong { font-size:18px; }
+      .brand span { font-size:12px; }
 
       nav a {
         font-size:13px;
@@ -305,22 +292,15 @@
         background-position:center;
       }
 
-      .hero h1 {
-        font-size:34px;
-      }
-
-      .hero p {
-        font-size:16px;
-      }
+      .hero h1 { font-size:34px; }
+      .hero p { font-size:16px; }
 
       .benefits div {
         font-size:13px;
         padding:8px 12px;
       }
 
-      .cards {
-        grid-template-columns:1fr;
-      }
+      .cards { grid-template-columns:1fr; }
     }
   </style>
 </head>
