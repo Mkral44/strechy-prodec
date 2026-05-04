@@ -3,109 +3,145 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Střechy Proděc | Pokrývačské služby Znojmo</title>
-  <meta name="description" content="Pokrývačské služby, montáže a opravy střech ve Znojmě a širokém okolí. Tomáš Prodělal.">
+  <title>Střechy Proděc</title>
+
   <style>
-    * { box-sizing: border-box; }
-    body { margin: 0; font-family: Arial, Helvetica, sans-serif; color: #143f49; background: #f6fbf8; }
-    a { color: inherit; }
-    header { background: white; border-bottom: 1px solid #d9e8df; position: sticky; top: 0; z-index: 10; }
-    .nav { max-width: 1150px; margin: auto; padding: 16px 22px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
-    .brand { font-size: 24px; font-weight: 800; color: #195f6f; }
-    .nav a { text-decoration: none; font-weight: 700; }
-    .btn { display: inline-block; background: #195f6f; color: white; padding: 14px 22px; border-radius: 14px; text-decoration: none; font-weight: 800; }
-    .btn:hover { background: #124a56; }
-    .hero { background: linear-gradient(135deg, #f6fbf8 0%, #dff1e9 55%, #cfe9dd 100%); }
-    .wrap { max-width: 1150px; margin: auto; padding: 70px 22px; }
-    .hero-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 40px; align-items: center; }
-    .badge { display: inline-block; background: white; border: 1px solid #c9e4d6; color: #28705f; padding: 10px 16px; border-radius: 999px; font-weight: 800; margin-bottom: 18px; }
-    h1 { font-size: clamp(38px, 6vw, 64px); line-height: 1.02; margin: 0 0 22px; color: #123f4a; }
-    h2 { font-size: clamp(30px, 4vw, 44px); margin: 0 0 16px; color: #123f4a; }
-    p { font-size: 18px; line-height: 1.7; color: #4b6268; }
-    .hero-card { background: rgba(255,255,255,.75); border: 1px solid white; border-radius: 32px; padding: 28px; box-shadow: 0 20px 45px rgba(20,63,73,.12); text-align: center; }
-    .logo-placeholder { height: 250px; border-radius: 30px; background: #eef8f2; display: flex; align-items: center; justify-content: center; color: #195f6f; font-weight: 800; border: 2px dashed #9ed8bf; }
-    .services { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 34px; }
-    .card { background: white; border: 1px solid #d9e8df; border-radius: 22px; padding: 24px; box-shadow: 0 10px 28px rgba(20,63,73,.06); }
-    .card strong { font-size: 18px; }
-    .dark { background: #123f4a; color: white; }
-    .dark h2, .dark p { color: white; }
-    .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 26px; }
-    .photo { min-height: 180px; border-radius: 24px; background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.18); display: flex; align-items: center; justify-content: center; font-weight: 800; color: #e7fff2; }
-    .contact-box { background: white; border-radius: 28px; padding: 32px; border: 1px solid #d9e8df; box-shadow: 0 14px 35px rgba(20,63,73,.08); }
-    .contact-line { display: block; background: #eef8f2; padding: 16px 18px; margin: 12px 0; border-radius: 16px; text-decoration: none; font-weight: 800; color: #195f6f; }
-    footer { background: white; border-top: 1px solid #d9e8df; padding: 24px; text-align: center; color: #5a7076; }
-    @media (max-width: 850px) {
-      .hero-grid, .services, .gallery { grid-template-columns: 1fr; }
-      .nav { flex-direction: column; align-items: flex-start; }
-      .wrap { padding: 48px 18px; }
+    html { scroll-behavior: smooth; }
+    body { margin:0; font-family: Arial, sans-serif; color:#143f49; }
+
+    header {
+      position: sticky;
+      top:0;
+      background:white;
+      border-bottom:1px solid #ddd;
+      z-index:10;
+    }
+
+    .nav {
+      max-width:1100px;
+      margin:auto;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:15px;
+    }
+
+    nav a {
+      margin:0 10px;
+      text-decoration:none;
+      font-weight:bold;
+      color:#195f6f;
+    }
+
+    nav a:hover {
+      text-decoration:underline;
+    }
+
+    section {
+      padding:80px 20px;
+      max-width:1100px;
+      margin:auto;
+    }
+
+    .hero {
+      background:#f3f7f6;
+      text-align:center;
+    }
+
+    .btn {
+      display:inline-block;
+      margin-top:20px;
+      padding:12px 20px;
+      background:#195f6f;
+      color:white;
+      text-decoration:none;
+      border-radius:10px;
+      font-weight:bold;
+    }
+
+    .dark {
+      background:#123f4a;
+      color:white;
+    }
+
+    .cards {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+      gap:20px;
+      margin-top:30px;
+    }
+
+    .card {
+      padding:20px;
+      border:1px solid #ddd;
+      border-radius:10px;
+    }
+
+    footer {
+      text-align:center;
+      padding:20px;
+      border-top:1px solid #ddd;
     }
   </style>
 </head>
+
 <body>
-  <header>
-    <div class="nav">
-      <div class="brand">Střechy Proděc</div>
-      <nav>
-        <a href="#sluzby">Služby</a> &nbsp;&nbsp;
-        <a href="#prace">Naše práce</a> &nbsp;&nbsp;
-        <a href="#kontakt">Kontakt</a>
-      </nav>
-      <a class="btn" href="tel:+420601343327">Zavolat</a>
-    </div>
-  </header>
 
-  <section class="hero">
-    <div class="wrap hero-grid">
-      <div>
-        <div class="badge">Znojmo a široké okolí</div>
-        <h1>Poctivé pokrývačské služby pro vaši střechu</h1>
-        <p>Provádíme pokrývačské práce, montáže a opravy střech s důrazem na kvalitu, spolehlivost a férové jednání.</p>
-        <a class="btn" href="#kontakt">Nezávazně poptat</a>
-      </div>
-      <div class="hero-card">
-<img src="logo.jpg" alt="Střechy Proděc logo" style="max-width: 100%; border-radius: 20px;">      </div>
+<header>
+  <div class="nav">
+    <div>
+      <img src="logo.png" alt="logo" style="height:50px;">
     </div>
-  </section>
 
-  <section id="sluzby">
-    <div class="wrap">
-      <h2>Co pro vás zajistíme</h2>
-      <p>Postaráme se o střechu od konzultace až po samotnou realizaci.</p>
-      <div class="services">
-        <div class="card"><strong>Pokrývačské práce</strong><p>Realizace a opravy střech.</p></div>
-        <div class="card"><strong>Montáž střech</strong><p>Pokládka střešních krytin.</p></div>
-        <div class="card"><strong>Opravy střech</strong><p>Řešení zatékání a poškození.</p></div>
-        <div class="card"><strong>Kontrola střechy</strong><p>Návrh vhodného řešení.</p></div>
-      </div>
-    </div>
-  </section>
+    <nav>
+      <a href="#uvod">Úvod</a>
+      <a href="#omne">O mně</a>
+      <a href="#sluzby">Moje služby</a>
+      <a href="#realizace">Realizace</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </div>
+</header>
 
-  <section id="prace" class="dark">
-    <div class="wrap">
-      <h2>Naše práce</h2>
-      <p>Fotky montáží sem doplníme, jakmile je pošlete.</p>
-      <div class="gallery">
-        <div class="photo">Fotka realizace</div>
-        <div class="photo">Detail střechy</div>
-        <div class="photo">Montáž</div>
-      </div>
-    </div>
-  </section>
+<section id="uvod" class="hero">
+  <h1>Pokrývačské služby</h1>
+  <p>Znojmo a široké okolí</p>
+  <a class="btn" href="#kontakt">Zavolat</a>
+</section>
 
-  <section id="kontakt">
-    <div class="wrap">
-      <div class="contact-box">
-        <h2>Kontakt</h2>
-        <p>Zavolejte nebo napište. Rádi probereme stav střechy, rozsah prací a možnosti realizace.</p>
-        <a class="contact-line" href="tel:+420601343327">Tomáš Prodělal · 601 343 327</a>
-        <a class="contact-line" href="mailto:strechyprodec@seznam.cz">strechyprodec@seznam.cz</a>
-        <div class="contact-line">Znojmo a široké okolí</div>
-      </div>
-    </div>
-  </section>
+<section id="omne">
+  <h2>O mně</h2>
+  <p>
+    Jmenuji se Tomáš Prodělal a zabývám se pokrývačskými pracemi.
+    Nabízím kvalitní a poctivou práci se zaměřením na spokojenost zákazníka.
+  </p>
+</section>
 
-  <footer>
-    © 2025 Střechy Proděc · Pokrývačské služby · Znojmo a okolí
-  </footer>
+<section id="sluzby">
+  <h2>Moje služby</h2>
+  <div class="cards">
+    <div class="card">Pokrývačské práce</div>
+    <div class="card">Montáž střech</div>
+    <div class="card">Opravy střech</div>
+    <div class="card">Kontrola střechy</div>
+  </div>
+</section>
+
+<section id="realizace" class="dark">
+  <h2>Realizace</h2>
+  <p>Zde budou fotky tvých prací (pošleš a doplníme)</p>
+</section>
+
+<section id="kontakt">
+  <h2>Kontakt</h2>
+  <p><strong>Tomáš Prodělal</strong></p>
+  <p><a href="tel:+420601343327">601 343 327</a></p>
+  <p><a href="mailto:strechyprodec@seznam.cz">strechyprodec@seznam.cz</a></p>
+</section>
+
+<footer>
+  © 2025 Střechy Proděc
+</footer>
+
 </body>
 </html>
