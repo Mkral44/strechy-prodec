@@ -110,10 +110,7 @@
     .overlay {
       position:absolute;
       inset:0;
-      background:linear-gradient(
-        rgba(0,0,0,0.75),
-        rgba(0,0,0,0.55)
-      );
+      background:linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.55));
       pointer-events:none;
     }
 
@@ -176,7 +173,7 @@
     }
 
     h2 {
-      font-size:36px;
+      font-size:38px;
       color:#123f4a;
       margin-top:0;
     }
@@ -189,82 +186,96 @@
 
     .about {
       max-width:none;
-      background:linear-gradient(135deg, #f7fbf8 0%, #e9f5ef 100%);
+      background:linear-gradient(135deg, #f8fcfa 0%, #e9f5ef 100%);
+      padding:95px 20px;
     }
 
-    .about-inner {
+    .about-wrap {
       max-width:1100px;
       margin:auto;
-      display:grid;
-      grid-template-columns:0.9fr 1.1fr;
-      gap:34px;
-      align-items:center;
     }
 
-    .about-badge {
+    .section-label {
       display:inline-block;
-      background:#e1f1e9;
+      background:#dff0e8;
       color:#195f6f;
-      padding:9px 14px;
+      padding:9px 15px;
       border-radius:999px;
       font-weight:bold;
       font-size:14px;
+      margin-bottom:16px;
+    }
+
+    .about-head {
+      max-width:760px;
+      margin-bottom:35px;
+    }
+
+    .about-head h2 {
       margin-bottom:14px;
     }
 
-    .about-card {
+    .about-grid {
+      display:grid;
+      grid-template-columns:1.15fr 0.85fr;
+      gap:28px;
+      align-items:stretch;
+    }
+
+    .about-text {
       background:white;
-      border:1px solid #dce9e3;
       border-radius:28px;
-      padding:34px;
+      padding:36px;
+      border:1px solid #dce9e3;
       box-shadow:0 18px 45px rgba(18,63,74,0.10);
-      position:relative;
-      overflow:hidden;
     }
 
-    .about-card:before {
-      content:"";
-      position:absolute;
-      top:0;
-      left:0;
-      width:8px;
-      height:100%;
-      background:#195f6f;
-    }
-
-    .about-card p {
+    .about-text p:first-child {
       margin-top:0;
     }
 
-    .about-card p:last-child {
+    .about-text p:last-child {
       margin-bottom:0;
     }
 
-    .about-side {
+    .about-highlights {
+      display:grid;
+      gap:18px;
+    }
+
+    .highlight {
       background:#123f4a;
       color:white;
-      border-radius:28px;
-      padding:34px;
-      box-shadow:0 18px 45px rgba(18,63,74,0.18);
+      border-radius:24px;
+      padding:24px;
+      box-shadow:0 16px 35px rgba(18,63,74,0.18);
     }
 
-    .about-side h3 {
+    .highlight:nth-child(2) {
+      background:#195f6f;
+    }
+
+    .highlight:nth-child(3) {
+      background:#2f7d64;
+    }
+
+    .highlight span {
+      display:block;
       font-size:28px;
-      margin:0 0 18px;
+      margin-bottom:10px;
     }
 
-    .about-points {
-      display:grid;
-      gap:14px;
-      margin-top:22px;
+    .highlight strong {
+      display:block;
+      font-size:20px;
+      margin-bottom:8px;
     }
 
-    .about-point {
-      background:rgba(255,255,255,0.10);
-      border:1px solid rgba(255,255,255,0.16);
-      border-radius:18px;
-      padding:16px;
-      font-weight:bold;
+    .highlight p {
+      color:rgba(255,255,255,0.88);
+      font-size:15px;
+      margin:0;
+      line-height:1.5;
     }
 
     .dark {
@@ -354,7 +365,11 @@
 
       section { padding:55px 18px; }
 
-      .about-inner {
+      .about {
+        padding:65px 18px;
+      }
+
+      .about-grid {
         grid-template-columns:1fr;
       }
     }
@@ -386,13 +401,17 @@
         padding:8px 12px;
       }
 
-      .cards { grid-template-columns:1fr; }
-
-      .about-card,
-      .about-side {
+      .about-text {
         padding:24px;
         border-radius:22px;
       }
+
+      .highlight {
+        padding:20px;
+        border-radius:20px;
+      }
+
+      .cards { grid-template-columns:1fr; }
     }
   </style>
 </head>
@@ -439,37 +458,50 @@
 </section>
 
 <section id="omne" class="about">
-  <div class="about-inner">
-    <div>
-      <span class="about-badge">O mně</span>
+  <div class="about-wrap">
+    <div class="about-head">
+      <span class="section-label">O mně</span>
       <h2>Střecha, na kterou se můžete spolehnout</h2>
       <p>
-        Zakládám si na poctivé práci, jasné domluvě a výsledku, který vydrží.
-        Každou střechu beru jako vlastní vizitku.
+        Každou střechu beru jako vlastní vizitku. Důležitá je pro mě poctivá práce,
+        jasná domluva a výsledek, který vydrží.
       </p>
     </div>
 
-    <div class="about-card">
-      <p>
-        Střechy jsou moje práce i moje jistota. Dělám kompletní realizace,
-        rekonstrukce i opravy a vždycky si hlídám každý detail, protože právě ty
-        rozhodují o tom, jak dlouho střecha vydrží. Pracuju poctivě, čistě a bez
-        zkratek — tak, jak bych to dělal i pro sebe.
-      </p>
-      <p>
-        Měřítkem úspěchu je pro mě spokojený zákazník a střecha, na kterou se
-        může spolehnout. Zakládám si na férovém jednání, jasné domluvě a práci,
-        která obstojí v čase. Chci, aby každý věděl, že když mi svěří střechu,
-        dostane kvalitní výsledek a klid v hlavě.
-      </p>
-    </div>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>
+          Střechy jsou moje práce i moje jistota. Dělám kompletní realizace,
+          rekonstrukce i opravy a vždycky si hlídám každý detail, protože právě ty
+          rozhodují o tom, jak dlouho střecha vydrží. Pracuju poctivě, čistě a bez
+          zkratek — tak, jak bych to dělal i pro sebe.
+        </p>
+        <p>
+          Měřítkem úspěchu je pro mě spokojený zákazník a střecha, na kterou se
+          může spolehnout. Zakládám si na férovém jednání, jasné domluvě a práci,
+          která obstojí v čase. Chci, aby každý věděl, že když mi svěří střechu,
+          dostane kvalitní výsledek a klid v hlavě.
+        </p>
+      </div>
 
-    <div class="about-side">
-      <h3>Na čem si dávám záležet</h3>
-      <div class="about-points">
-        <div class="about-point">✔ Pečlivé provedení každého detailu</div>
-        <div class="about-point">✔ Čistá práce bez zbytečných zkratek</div>
-        <div class="about-point">✔ Férová domluva od začátku do konce</div>
+      <div class="about-highlights">
+        <div class="highlight">
+          <span>01</span>
+          <strong>Detail rozhoduje</strong>
+          <p>Hlídám si každý spoj, zakončení i provedení, protože právě detaily dělají životnost střechy.</p>
+        </div>
+
+        <div class="highlight">
+          <span>02</span>
+          <strong>Poctivá práce</strong>
+          <p>Pracuju čistě, bez zkratek a tak, aby výsledek dával smysl dlouhodobě.</p>
+        </div>
+
+        <div class="highlight">
+          <span>03</span>
+          <strong>Férová domluva</strong>
+          <p>Zakládám si na jasné komunikaci, spolehlivosti a férovém jednání.</p>
+        </div>
       </div>
     </div>
   </div>
