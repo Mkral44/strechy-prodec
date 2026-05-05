@@ -3,358 +3,70 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Střechy Proděc</title>
+
+<title>Střechy Proděc | Střechy Znojmo</title>
+<meta name="description" content="Střechy Proděc – pokrývačství, klempířství a tesařství ve Znojmě a širokém okolí.">
 
 <style>
-html { scroll-behavior:smooth; }
-body { margin:0; font-family:Arial, sans-serif; background:#f7fbf8; color:#123f4a; }
+html {scroll-behavior:smooth;}
+body {margin:0;font-family:Arial;background:#f7fbf8;color:#123f4a;}
 
-header {
-  position:sticky; top:0; z-index:100;
-  background:white; border-bottom:1px solid #e6eee9;
-  box-shadow:0 6px 20px rgba(0,0,0,.06);
-}
+/* HEADER */
+header{position:sticky;top:0;background:white;z-index:100;border-bottom:1px solid #eee;}
+.nav{max-width:1200px;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:12px 20px;}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:#123f4a;}
+.logo img{width:55px;height:55px;border-radius:50%;}
+.logo-text strong{font-size:20px;}
+.logo-text span{font-size:11px;}
+nav a{margin:0 10px;text-decoration:none;font-weight:600;color:#195f6f;}
 
-.nav {
-  max-width:1200px; margin:auto;
-  display:flex; justify-content:space-between; align-items:center;
-  padding:12px 20px; gap:25px;
-}
+/* HERO */
+.hero{height:100vh;background:url('uvod.jpeg') center/cover no-repeat;display:flex;align-items:center;justify-content:center;position:relative;text-align:center;color:white;}
+.overlay{position:absolute;inset:0;background:rgba(0,0,0,0.6);}
+.hero-content{position:relative;}
+.hero h1{font-size:50px;}
+.hero p{font-size:20px;}
+.btn{display:inline-block;margin-top:20px;padding:14px 26px;border-radius:30px;background:#195f6f;color:white;text-decoration:none;}
 
-.logo {
-  display:flex; align-items:center; gap:10px;
-  text-decoration:none; color:#123f4a;
-}
+/* O NÁS */
+.about{padding:80px 20px;background:#f0f8f4;}
+.about-wrap{max-width:1200px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:40px;}
+.about-img{width:100%;height:500px;object-fit:cover;border-radius:20px;}
+.about-text h2{font-size:40px;}
+.about-text p{line-height:1.7;}
 
-.logo img { width:58px; height:58px; border-radius:50%; object-fit:cover; }
-.logo-text strong { font-size:21px; display:block; color:#195f6f; }
-.logo-text span { font-size:11px; font-weight:bold; color:#5b7b72; }
+/* SLUŽBY */
+.services{text-align:center;padding:80px 20px;}
+.services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;max-width:1200px;margin:auto;}
+.service{background:white;padding:25px;border-radius:15px;box-shadow:0 10px 25px rgba(0,0,0,0.05);}
 
-nav a {
-  margin:0 10px; text-decoration:none;
-  font-weight:700; color:#195f6f;
-}
+/* GALERIE */
+.gallery-section{background:#123f4a;color:white;padding:80px 20px;text-align:center;}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;max-width:1200px;margin:auto;}
+.gallery-item{height:250px;overflow:hidden;border-radius:15px;cursor:pointer;}
+.gallery img{width:100%;height:100%;object-fit:cover;transition:.4s;}
+.gallery img:hover{transform:scale(1.1);}
 
-nav a:hover { color:#2f7d64; }
+/* LIGHTBOX */
+.lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.9);justify-content:center;align-items:center;}
+.lightbox img{max-width:90%;max-height:90%;}
+.lightbox span{position:absolute;top:20px;right:30px;font-size:40px;color:white;cursor:pointer;}
 
-.hero {
-  height:100vh; min-height:620px;
-  background:url('uvod.jpeg') center/cover no-repeat;
-  display:flex; align-items:center; justify-content:center;
-  position:relative; text-align:center; color:white;
-}
+/* KONTAKT */
+.contact{background:#0f1b20;color:white;padding:80px 20px;}
+.contact-wrap{max-width:1200px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:30px;}
+.contact-box{background:#1b2b32;padding:30px;border-radius:20px;}
+input,textarea{width:100%;padding:12px;margin-top:10px;border-radius:10px;border:none;}
+button{margin-top:15px;padding:15px;width:100%;border:none;border-radius:20px;background:#19b7d4;color:white;font-weight:bold;}
 
-.overlay {
-  position:absolute; inset:0;
-  background:linear-gradient(rgba(0,0,0,.72), rgba(0,0,0,.55));
-}
+/* FOOTER */
+.footer{background:#0f1b20;color:white;padding:50px 20px;}
+.footer-wrap{max-width:1200px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.footer a{color:white;text-decoration:none;}
+.footer-bottom{text-align:center;margin-top:20px;font-size:14px;color:#ccc;}
 
-.hero-content { position:relative; max-width:900px; padding:0 20px; }
-.hero h1 { font-size:58px; margin:0 0 16px; text-shadow:0 5px 25px rgba(0,0,0,.75); }
-.hero p { font-size:22px; font-weight:600; }
-
-.btn {
-  display:inline-block; margin-top:24px;
-  padding:15px 28px; border-radius:999px;
-  background:#195f6f; color:white;
-  text-decoration:none; font-weight:bold;
-  box-shadow:0 12px 30px rgba(0,0,0,.25);
-}
-
-.about {
-  padding:90px 20px;
-  background:linear-gradient(135deg,#f7fbf8,#eaf6f0);
-}
-
-.about-wrap {
-  max-width:1200px; margin:auto;
-  display:grid; grid-template-columns:1fr 1fr;
-  gap:45px; align-items:center;
-}
-
-.about-img {
-  width:100%; height:560px; object-fit:cover;
-  border-radius:32px;
-  box-shadow:0 25px 60px rgba(18,63,74,.18);
-}
-
-.about-text {
-  background:white; padding:42px;
-  border-radius:30px;
-  box-shadow:0 20px 50px rgba(18,63,74,.10);
-}
-
-.about-text h2 { font-size:48px; margin-top:0; color:#123f4a; }
-.about-text p { line-height:1.75; font-size:18px; color:#4c6268; }
-
-.services {
-  padding:90px 20px;
-  text-align:center;
-}
-
-.services h2,
-.gallery-section h2 {
-  font-size:42px;
-  margin-bottom:18px;
-}
-
-.services-grid {
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:20px;
-  max-width:1200px;
-  margin:40px auto 0;
-}
-
-.service {
-  background:white;
-  padding:34px 22px;
-  border-radius:22px;
-  box-shadow:0 12px 32px rgba(18,63,74,.08);
-  font-weight:bold;
-  font-size:18px;
-  border:1px solid #dce9e3;
-}
-
-.gallery-section {
-  padding:90px 20px;
-  background:#123f4a;
-  color:white;
-  text-align:center;
-}
-
-.gallery-section p { color:#dcefed; }
-
-.gallery {
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:16px;
-  max-width:1250px;
-  margin:40px auto 0;
-}
-
-.gallery-item {
-  height:245px;
-  overflow:hidden;
-  border-radius:22px;
-  cursor:pointer;
-  box-shadow:0 18px 38px rgba(0,0,0,.25);
-  position:relative;
-}
-
-.gallery-item img {
-  width:100%; height:100%;
-  object-fit:cover;
-  transition:.4s ease;
-}
-
-.gallery-item:hover img { transform:scale(1.08); filter:brightness(.82); }
-
-.gallery-item::after {
-  content:"Zobrazit";
-  position:absolute;
-  inset:auto 18px 18px 18px;
-  background:rgba(0,0,0,.55);
-  color:white;
-  padding:10px;
-  border-radius:999px;
-  opacity:0;
-  transition:.3s;
-  font-weight:bold;
-}
-
-.gallery-item:hover::after { opacity:1; }
-
-.lightbox {
-  display:none;
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,.9);
-  z-index:999;
-  align-items:center;
-  justify-content:center;
-  padding:20px;
-}
-
-.lightbox img {
-  max-width:95%;
-  max-height:90vh;
-  border-radius:18px;
-  box-shadow:0 25px 80px rgba(0,0,0,.6);
-}
-
-.lightbox span {
-  position:absolute;
-  top:25px;
-  right:35px;
-  color:white;
-  font-size:42px;
-  cursor:pointer;
-}
-
-.contact {
-  padding:95px 20px;
-  background:
-    radial-gradient(circle at top left, rgba(158,216,191,.20), transparent 35%),
-    linear-gradient(135deg,#0f1b20,#14292f);
-  color:white;
-}
-
-.contact-wrap {
-  max-width:1180px; margin:auto;
-  display:grid; grid-template-columns:.85fr 1.15fr;
-  gap:32px;
-}
-
-.contact-card {
-  background:rgba(255,255,255,.08);
-  border:1px solid rgba(255,255,255,.14);
-  border-radius:30px;
-  padding:36px;
-  backdrop-filter:blur(12px);
-  box-shadow:0 25px 60px rgba(0,0,0,.28);
-}
-
-.contact-card h2 {
-  font-size:36px;
-  margin-top:0;
-  color:white;
-}
-
-.contact-card p { color:#d9e7e8; line-height:1.6; }
-
-.contact-line {
-  background:rgba(255,255,255,.08);
-  border:1px solid rgba(255,255,255,.09);
-  border-radius:18px;
-  padding:18px;
-  margin-top:14px;
-}
-
-.contact-line strong {
-  display:block;
-  color:#9ed8bf;
-  margin-bottom:6px;
-}
-
-.contact a {
-  color:white;
-  font-weight:bold;
-  text-decoration:none;
-}
-
-.form-grid {
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:16px;
-}
-
-.form-field {
-  margin-bottom:16px;
-}
-
-label {
-  display:block;
-  margin-bottom:8px;
-  color:white;
-  font-weight:bold;
-}
-
-input, textarea {
-  width:100%;
-  box-sizing:border-box;
-  border:none;
-  outline:none;
-  border-radius:16px;
-  padding:16px;
-  font-size:16px;
-  font-family:Arial, sans-serif;
-  color:#123f4a;
-  background:rgba(255,255,255,.95);
-  border:2px solid transparent;
-}
-
-input:focus, textarea:focus {
-  border-color:#9ed8bf;
-  box-shadow:0 0 0 4px rgba(158,216,191,.18);
-}
-
-textarea {
-  min-height:155px;
-  resize:vertical;
-}
-
-.submit-btn {
-  width:100%;
-  border:none;
-  cursor:pointer;
-  padding:18px 26px;
-  border-radius:999px;
-  background:linear-gradient(135deg,#9ed8bf,#195f6f);
-  color:white;
-  font-size:18px;
-  font-weight:bold;
-  box-shadow:0 15px 35px rgba(25,95,111,.4);
-}
-
-.note {
-  color:#b9cacc;
-  font-size:14px;
-}
-
-footer {
-  text-align:center;
-  padding:24px;
-  background:white;
-  color:#5b6d72;
-}
-
-@media(max-width:1000px){
-  .about-wrap,
-  .contact-wrap {
-    grid-template-columns:1fr;
-  }
-
-  .gallery {
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .services-grid {
-    grid-template-columns:repeat(2,1fr);
-  }
-}
-
-@media(max-width:700px){
-  .nav {
-    flex-direction:column;
-  }
-
-  nav {
-    text-align:center;
-  }
-
-  nav a {
-    display:inline-block;
-    margin:5px;
-    font-size:14px;
-  }
-
-  .hero h1 { font-size:36px; }
-  .hero p { font-size:17px; }
-
-  .about-img { height:360px; }
-  .about-text { padding:28px; }
-  .about-text h2 { font-size:36px; }
-
-  .gallery,
-  .services-grid,
-  .form-grid {
-    grid-template-columns:1fr;
-  }
-
-  .gallery-item {
-    height:300px;
-  }
+@media(max-width:900px){
+.about-wrap,.services-grid,.gallery,.contact-wrap,.footer-wrap{grid-template-columns:1fr;}
 }
 </style>
 </head>
@@ -362,181 +74,127 @@ footer {
 <body>
 
 <header>
-  <div class="nav">
-    <a href="#uvod" class="logo">
-      <img src="logo.jpg" alt="Střechy Proděc logo">
-      <div class="logo-text">
-        <strong>Střechy Proděc</strong>
-        <span>Tesařství • Klempířství • Pokrývačství • Izolatérství</span>
-      </div>
-    </a>
+<div class="nav">
+<a href="#uvod" class="logo">
+<img src="logo.jpg">
+<div class="logo-text">
+<strong>Střechy Proděc</strong>
+<span>Tesařství • Klempířství • Pokrývačství • Izolatérství</span>
+</div>
+</a>
 
-    <nav>
-      <a href="#uvod">Úvod</a>
-      <a href="#onas">O nás</a>
-      <a href="#sluzby">Naše služby</a>
-      <a href="#realizace">Realizace</a>
-      <a href="#kontakt">Kontakt</a>
-    </nav>
-  </div>
+<nav>
+<a href="#uvod">Úvod</a>
+<a href="#onas">O nás</a>
+<a href="#sluzby">Služby</a>
+<a href="#realizace">Realizace</a>
+<a href="#kontakt">Kontakt</a>
+</nav>
+</div>
 </header>
 
 <section id="uvod" class="hero">
-  <div class="overlay"></div>
-  <div class="hero-content">
-    <h1>Kvalitní střechy bez starostí</h1>
-    <p>Vše kolem střech ve Znojmě a okolí</p>
-    <a href="#kontakt" class="btn">Nezávazná poptávka</a>
-  </div>
+<div class="overlay"></div>
+<div class="hero-content">
+<h1>Kvalitní střechy bez starostí</h1>
+<p>Vše kolem střech ve Znojmě a širokém okolí</p>
+<a href="#kontakt" class="btn">Nezávazná poptávka</a>
+</div>
 </section>
 
 <section id="onas" class="about">
-  <div class="about-wrap">
-    <img src="o_nas.jpeg" class="about-img" alt="Krov a práce na střeše">
+<div class="about-wrap">
+<img src="o_nas.jpeg" class="about-img">
 
-    <div class="about-text">
-      <h2>O nás</h2>
-
-      <p>
-        Střechy jsou naše práce i naše jistota. Děláme kompletní realizace,
-        rekonstrukce i opravy a vždy si hlídáme každý detail, protože právě ty
-        rozhodují o tom, jak dlouho střecha vydrží. Pracujeme poctivě, čistě
-        a bez zkratek — tak, jak bychom to dělali i pro sebe.
-      </p>
-
-      <p>
-        Měřítkem úspěchu je pro nás spokojený zákazník a střecha, na kterou se
-        může spolehnout. Zakládáme si na férovém jednání, jasné domluvě a práci,
-        která obstojí v čase. Chceme, aby každý věděl, že když nám svěří střechu,
-        dostane kvalitní výsledek a klid v hlavě.
-      </p>
-    </div>
-  </div>
+<div class="about-text">
+<h2>O nás</h2>
+<p>Střechy jsou naše práce i naše jistota...</p>
+<p>Měřítkem úspěchu je pro nás spokojený zákazník...</p>
+</div>
+</div>
 </section>
 
 <section id="sluzby" class="services">
-  <h2>Naše služby</h2>
-  <p>Postaráme se o střechu od základní domluvy až po poctivě odvedenou práci.</p>
-
-  <div class="services-grid">
-    <div class="service">Tesařství</div>
-    <div class="service">Klempířství</div>
-    <div class="service">Pokrývačství</div>
-    <div class="service">Izolatérství</div>
-  </div>
+<h2>Naše služby</h2>
+<div class="services-grid">
+<div class="service">Tesařství</div>
+<div class="service">Klempířství</div>
+<div class="service">Pokrývačství</div>
+<div class="service">Izolatérství</div>
+</div>
 </section>
 
 <section id="realizace" class="gallery-section">
-  <h2>Naše realizace</h2>
-  <p>Ukázky střech, krovů a detailů z našich prací.</p>
-
-  <div class="gallery">
-    <div class="gallery-item"><img src="realizace1.png" alt="Realizace střechy"></div>
-    <div class="gallery-item"><img src="realizace1.jpeg" alt="Realizace střechy"></div>
-    <div class="gallery-item"><img src="realizace2.jpeg" alt="Realizace střechy"></div>
-    <div class="gallery-item"><img src="realizace3.jpeg" alt="Realizace střechy"></div>
-    <div class="gallery-item"><img src="realizace4.jpeg" alt="Realizace střechy"></div>
-    <div class="gallery-item"><img src="realizace5.jpeg" alt="Realizace střechy"></div>
-    <div class="gallery-item"><img src="realizace6.jpeg" alt="Realizace střechy"></div>
-    <div class="gallery-item"><img src="realizace7.jpeg" alt="Realizace střechy"></div>
-  </div>
+<h2>Realizace</h2>
+<div class="gallery">
+<img src="realizace1.png">
+<img src="realizace1.jpeg">
+<img src="realizace2.jpeg">
+<img src="realizace3.jpeg">
+<img src="realizace4.jpeg">
+<img src="realizace5.jpeg">
+<img src="realizace6.jpeg">
+<img src="realizace7.jpeg">
+</div>
 </section>
 
 <section id="kontakt" class="contact">
-  <div class="contact-wrap">
+<div class="contact-wrap">
 
-    <div class="contact-card">
-      <h2>Kontakt</h2>
-      <p>Ozvěte se nám a domluvíme se na dalším postupu.</p>
-
-      <div class="contact-line">
-        <strong>Kontaktní osoba</strong>
-        Tomáš Prodělal
-      </div>
-
-      <div class="contact-line">
-        <strong>Telefon</strong>
-        <a href="tel:+420601343327">601 343 327</a>
-      </div>
-
-      <div class="contact-line">
-        <strong>Email</strong>
-        <a href="mailto:strechyprodec@seznam.cz">strechyprodec@seznam.cz</a>
-      </div>
-
-      <div class="contact-line">
-        <strong>Oblast působení</strong>
-        Znojmo a široké okolí
-      </div>
-    </div>
-
-    <div class="contact-card">
-      <h2>Nezávazná poptávka</h2>
-      <p>Popište nám, co potřebujete. Čím více informací pošlete, tím lépe se domluvíme.</p>
-
-      <form action="mailto:strechyprodec@seznam.cz" method="post" enctype="text/plain">
-        <div class="form-grid">
-          <div class="form-field">
-            <label>Jméno *</label>
-            <input type="text" name="Jméno" placeholder="Vaše jméno" required>
-          </div>
-
-          <div class="form-field">
-            <label>Email *</label>
-            <input type="email" name="Email" placeholder="vas@email.cz" required>
-          </div>
-        </div>
-
-        <div class="form-field">
-          <label>Telefon</label>
-          <input type="tel" name="Telefon" placeholder="601 343 327">
-        </div>
-
-        <div class="form-field">
-          <label>Co potřebujete? *</label>
-          <textarea name="Zpráva" placeholder="Např. nová střecha, oprava, rekonstrukce, klempířské práce, izolace..." required></textarea>
-        </div>
-
-        <p class="note">* Povinná pole. Formulář otevře e-mailový program s připravenou zprávou.</p>
-
-        <button class="submit-btn" type="submit">Odeslat poptávku</button>
-      </form>
-    </div>
-
-  </div>
-</section>
-
-<div class="lightbox" id="lightbox">
-  <span onclick="closeLightbox()">&times;</span>
-  <img id="lightbox-img" src="" alt="">
+<div class="contact-box">
+<h2>Kontakt</h2>
+<p><strong>Tomáš Prodělal</strong></p>
+<p>📞 601 343 327</p>
+<p>✉ strechyprodec@seznam.cz</p>
+<p>📍 Šumná 27 · Znojmo a široké okolí</p>
 </div>
 
-<footer>
-  © 2025 Střechy Proděc
+<div class="contact-box">
+<h2>Poptávka</h2>
+<form action="https://formsubmit.co/strechyprodec@seznam.cz" method="POST">
+<input type="text" name="jmeno" placeholder="Jméno" required>
+<input type="email" name="email" placeholder="Email" required>
+<textarea name="zprava" placeholder="Co potřebujete?" required></textarea>
+
+<label>
+<input type="checkbox" required>
+Souhlasím se zpracováním údajů (<a href="gdpr.html">GDPR</a>)
+</label>
+
+<button type="submit">Odeslat</button>
+</form>
+</div>
+
+</div>
+</section>
+
+<footer class="footer">
+<div class="footer-wrap">
+
+<div>
+<h3>Střechy Proděc</h3>
+<p>Vše kolem střech ve Znojmě</p>
+</div>
+
+<div>
+<h3>Kontakt</h3>
+<p>📞 601 343 327</p>
+<p>✉ strechyprodec@seznam.cz</p>
+<p>📍 Šumná 27</p>
+</div>
+
+<div>
+<h3>Informace</h3>
+<p><a href="gdpr.html">Ochrana osobních údajů</a></p>
+<p><a href="https://www.instagram.com/strechy_prodec/" target="_blank">Instagram</a></p>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+© 2025 Střechy Proděc – Všechna práva vyhrazena
+</div>
 </footer>
-
-<script>
-const galleryImages = document.querySelectorAll('.gallery-item img');
-const lightbox = document.getElementById('lightbox');
-const lightboxImg = document.getElementById('lightbox-img');
-
-galleryImages.forEach(img => {
-  img.addEventListener('click', () => {
-    lightbox.style.display = 'flex';
-    lightboxImg.src = img.src;
-  });
-});
-
-function closeLightbox() {
-  lightbox.style.display = 'none';
-}
-
-lightbox.addEventListener('click', (e) => {
-  if (e.target === lightbox) {
-    closeLightbox();
-  }
-});
-</script>
 
 </body>
 </html>
