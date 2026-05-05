@@ -4,121 +4,33 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Střechy Proděc | Tesařství, klempířství, pokrývačství Znojmo</title>
-<meta name="description" content="Střechy Proděc – tesařství, klempířství, pokrývačství a izolatérství ve Znojmě a širokém okolí. Kompletní realizace, rekonstrukce a opravy střech.">
-<meta name="keywords" content="střechy Znojmo, pokrývač Znojmo, klempíř Znojmo, tesařství Znojmo, rekonstrukce střech, opravy střech, izolatérství, střechy Šumná">
-<meta name="robots" content="index, follow">
-<meta name="author" content="Střechy Proděc">
+<title>Střechy Proděc</title>
 
-<link rel="icon" href="logo.jpg" type="image/jpeg">
-<link rel="apple-touch-icon" href="logo.jpg">
+<link rel="icon" href="logo.jpg">
 
 <style>
 html{scroll-behavior:smooth}
-body{margin:0;font-family:Arial,sans-serif;background:#f7fbf8;color:#123f4a}
+body{margin:0;font-family:Arial;background:#f7fbf8;color:#123f4a}
 
-header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);border-bottom:1px solid #e6eee9;box-shadow:0 6px 20px rgba(0,0,0,.06)}
-.nav{max-width:1200px;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:12px 20px;gap:25px}
-.logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:#123f4a}
-.logo img{width:58px;height:58px;border-radius:50%;object-fit:cover}
-.logo-text strong{font-size:21px;display:block;color:#195f6f}
-.logo-text span{font-size:11px;font-weight:bold;color:#5b7b72}
-nav a{margin:0 10px;text-decoration:none;font-weight:700;color:#195f6f}
-nav a:hover{color:#2f7d64}
+header{position:sticky;top:0;background:white;z-index:100;border-bottom:1px solid #eee}
+.nav{max-width:1200px;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:10px 20px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:#123f4a}
+.logo img{width:50px;height:50px;border-radius:50%}
 
-.hero{height:100vh;min-height:620px;background:url('uvod.jpeg') center/cover no-repeat;display:flex;align-items:center;justify-content:center;position:relative;text-align:center;color:white}
-.overlay{position:absolute;inset:0;background:linear-gradient(rgba(0,0,0,.72),rgba(0,0,0,.55))}
-.hero-content{position:relative;max-width:900px;padding:0 20px}
-.hero h1{font-size:58px;margin:0 0 16px;text-shadow:0 5px 25px rgba(0,0,0,.75)}
-.hero p{font-size:22px;font-weight:600}
-.btn{display:inline-block;margin-top:24px;padding:15px 28px;border-radius:999px;background:#195f6f;color:white;text-decoration:none;font-weight:bold;box-shadow:0 12px 30px rgba(0,0,0,.25)}
-.btn:hover{background:#123f4a}
+nav a{margin:0 10px;text-decoration:none;font-weight:bold;color:#195f6f}
 
-.about{padding:95px 20px;background:linear-gradient(135deg,#f7fbf8,#eaf6f0)}
-.about-wrap{max-width:1250px;margin:auto;display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
-.about-img{width:100%;height:590px;object-fit:cover;border-radius:34px;box-shadow:0 25px 60px rgba(18,63,74,.18)}
-.about-text{background:white;padding:46px;border-radius:32px;box-shadow:0 20px 50px rgba(18,63,74,.10);border:1px solid #dce9e3}
-.label{display:inline-block;background:#195f6f;color:white;padding:12px 20px;border-radius:999px;font-weight:800;font-size:15px;margin-bottom:18px;box-shadow:0 10px 25px rgba(25,95,111,.22);letter-spacing:.2px}
-.about-text h2{font-size:48px;margin:0 0 22px;color:#123f4a}
-.about-text p{line-height:1.75;font-size:18px;color:#4c6268}
+.hero{height:100vh;background:url('uvod.jpeg') center/cover no-repeat;display:flex;align-items:center;justify-content:center;position:relative;text-align:center;color:white}
+.overlay{position:absolute;inset:0;background:rgba(0,0,0,.6)}
+.hero-content{position:relative}
+.hero h1{font-size:50px}
+.btn{background:#195f6f;color:white;padding:15px 25px;border-radius:999px;text-decoration:none;display:inline-block;margin-top:20px}
 
-.services{padding:95px 20px;text-align:center;background:white}
-.services h2,.gallery-section h2{font-size:42px;margin:0 0 18px}
-.services p{color:#4c6268;font-size:18px}
-.services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;max-width:1200px;margin:42px auto 0}
-.service{background:#f7fbf8;padding:32px 22px;border-radius:24px;box-shadow:0 12px 32px rgba(18,63,74,.08);font-weight:bold;font-size:18px;border:1px solid #dce9e3}
-.service span{display:block;font-size:34px;margin-bottom:10px}
+.services{padding:80px 20px;text-align:center}
+.services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;max-width:1000px;margin:auto}
+.service{background:white;padding:25px;border-radius:15px;box-shadow:0 10px 20px rgba(0,0,0,.1)}
 
-.gallery-section{padding:95px 20px;background:#123f4a;color:white;text-align:center}
-.gallery-section p{color:#dcefed}
-.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;max-width:1250px;margin:42px auto 0}
-.gallery-item{height:245px;overflow:hidden;border-radius:22px;cursor:pointer;box-shadow:0 18px 38px rgba(0,0,0,.25);position:relative}
-.gallery-item img{width:100%;height:100%;object-fit:cover;transition:.4s ease}
-.gallery-item:hover img{transform:scale(1.08);filter:brightness(.82)}
-.gallery-item::after{content:"Zobrazit";position:absolute;left:18px;right:18px;bottom:18px;background:rgba(0,0,0,.55);color:white;padding:10px;border-radius:999px;opacity:0;transition:.3s;font-weight:bold}
-.gallery-item:hover::after{opacity:1}
-
-.lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,.9);z-index:999;align-items:center;justify-content:center;padding:20px}
-.lightbox img{max-width:95%;max-height:90vh;border-radius:18px}
-.lightbox span{position:absolute;top:25px;right:35px;color:white;font-size:42px;cursor:pointer}
-
-.contact{padding:95px 20px;background:radial-gradient(circle at top left,rgba(158,216,191,.20),transparent 35%),linear-gradient(135deg,#0f1b20,#14292f);color:white}
-.contact-wrap{max-width:1180px;margin:auto;display:grid;grid-template-columns:.85fr 1.15fr;gap:32px}
-.contact-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:30px;padding:36px;backdrop-filter:blur(12px);box-shadow:0 25px 60px rgba(0,0,0,.28)}
-.contact-card h2{font-size:36px;margin-top:0;color:white}
-.contact-card p{color:#d9e7e8;line-height:1.6}
-.contact-line{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.09);border-radius:18px;padding:18px;margin-top:14px}
-.contact-line strong{display:block;color:#9ed8bf;margin-bottom:6px}
-.contact a{color:white;font-weight:bold;text-decoration:none}
-
-.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.form-field{margin-bottom:16px}
-label{display:block;margin-bottom:8px;color:white;font-weight:bold}
-input,textarea{width:100%;box-sizing:border-box;border:none;outline:none;border-radius:16px;padding:16px;font-size:16px;font-family:Arial,sans-serif;color:#123f4a;background:rgba(255,255,255,.95);border:2px solid transparent}
-input:focus,textarea:focus{border-color:#9ed8bf;box-shadow:0 0 0 4px rgba(158,216,191,.18)}
-textarea{min-height:155px;resize:vertical}
-.hidden-field{display:none}
-.gdpr-check{display:flex;gap:10px;align-items:flex-start;color:#d9e7e8;font-size:14px;line-height:1.5}
-.gdpr-check input{width:auto;margin-top:3px}
-.gdpr-check a{color:#9ed8bf;text-decoration:underline}
-.submit-btn{width:100%;border:none;cursor:pointer;padding:18px 26px;border-radius:999px;background:linear-gradient(135deg,#9ed8bf,#195f6f);color:white;font-size:18px;font-weight:bold;box-shadow:0 15px 35px rgba(25,95,111,.4)}
-
-.footer{background:#071014;color:white;padding:65px 20px 24px}
-.footer-wrap{max-width:1200px;margin:auto;display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:34px}
-.footer h3{color:#9ed8bf;margin:0 0 15px}
-.footer p{color:#d9e7e8;line-height:1.6}
-.footer a{color:white;text-decoration:none;font-weight:bold}
-.footer a:hover{text-decoration:underline}
-.footer-bottom{text-align:center;margin-top:42px;font-size:14px;color:#b0c3c7;border-top:1px solid rgba(255,255,255,.12);padding-top:20px}
-.instagram-link{display:inline-flex;align-items:center;gap:10px}
+.instagram-link{display:flex;align-items:center;gap:10px}
 .instagram-icon{width:22px;height:22px}
-
-.cookie-banner{position:fixed;left:20px;right:20px;bottom:20px;z-index:1000;background:#071014;color:white;border:1px solid rgba(255,255,255,.14);border-radius:24px;box-shadow:0 20px 60px rgba(0,0,0,.35);padding:22px;display:none}
-.cookie-inner{max-width:1150px;margin:auto;display:flex;gap:20px;align-items:center;justify-content:space-between}
-.cookie-banner p{margin:0;color:#d9e7e8;line-height:1.5}
-.cookie-actions{display:flex;gap:10px;flex-wrap:wrap}
-.cookie-btn{border:none;border-radius:999px;padding:12px 18px;font-weight:bold;cursor:pointer}
-.cookie-accept{background:#9ed8bf;color:#071014}
-.cookie-decline{background:transparent;color:white;border:1px solid rgba(255,255,255,.25)}
-
-@media(max-width:1000px){
-.about-wrap,.contact-wrap,.footer-wrap{grid-template-columns:1fr}
-.gallery{grid-template-columns:repeat(2,1fr)}
-.services-grid{grid-template-columns:repeat(2,1fr)}
-.cookie-inner{flex-direction:column;align-items:flex-start}
-}
-@media(max-width:700px){
-.nav{flex-direction:column}
-nav{text-align:center}
-nav a{display:inline-block;margin:5px;font-size:14px}
-.hero h1{font-size:36px}
-.hero p{font-size:17px}
-.about-img{height:360px}
-.about-text{padding:28px}
-.about-text h2{font-size:36px}
-.gallery,.services-grid,.form-grid{grid-template-columns:1fr}
-.gallery-item{height:300px}
-}
 </style>
 </head>
 
@@ -127,18 +39,13 @@ nav a{display:inline-block;margin:5px;font-size:14px}
 <header>
   <div class="nav">
     <a href="#uvod" class="logo">
-      <img src="logo.jpg" alt="Střechy Proděc logo">
-      <div class="logo-text">
-        <strong>Střechy Proděc</strong>
-        <span>Tesařství • Klempířství • Pokrývačství • Izolatérství</span>
-      </div>
+      <img src="logo.jpg">
+      <strong>Střechy Proděc</strong>
     </a>
 
     <nav>
       <a href="#uvod">Úvod</a>
-      <a href="#onas">O nás</a>
       <a href="#sluzby">Naše služby</a>
-      <a href="#realizace">Realizace</a>
       <a href="#kontakt">Kontakt</a>
     </nav>
   </div>
@@ -148,214 +55,51 @@ nav a{display:inline-block;margin:5px;font-size:14px}
   <div class="overlay"></div>
   <div class="hero-content">
     <h1>Kvalitní střechy bez starostí</h1>
-    <p>Vše kolem střech ve Znojmě a širokém okolí</p>
+    <p>Ve Znojmě a širokém okolí</p>
     <a href="#kontakt" class="btn">Nezávazná poptávka</a>
   </div>
 </section>
 
-<section id="onas" class="about">
-  <div class="about-wrap">
-    <img src="o_nas.jpeg" class="about-img" alt="Krov a práce na střeše">
-
-    <div class="about-text">
-      <span class="label">O nás</span>
-      <h2>Střecha, na kterou se můžete spolehnout</h2>
-      <p>Střechy jsou naše práce i naše jistota. Děláme kompletní realizace, rekonstrukce i opravy a vždy si hlídáme každý detail, protože právě ty rozhodují o tom, jak dlouho střecha vydrží. Pracujeme poctivě, čistě a bez zkratek — tak, jak bychom to dělali i pro sebe.</p>
-      <p>Měřítkem úspěchu je pro nás spokojený zákazník a střecha, na kterou se může spolehnout. Zakládáme si na férovém jednání, jasné domluvě a práci, která obstojí v čase. Chceme, aby každý věděl, že když nám svěří střechu, dostane kvalitní výsledek a klid v hlavě.</p>
-    </div>
-  </div>
-</section>
-
 <section id="sluzby" class="services">
-  <span class="label">Naše služby</span>
-  <h2>Co pro vás zajistíme</h2>
-  <p>Postaráme se o střechu od základní domluvy až po poctivě odvedenou práci.</p>
+  <h2>Naše služby</h2>
 
   <div class="services-grid">
-    <div class="service"><span>🪚</span>Tesařství</div>
-    <div class="service"><span>🔨</span>Klempířství</div>
-    <div class="service"><span>🏠</span>Pokrývačství</div>
-    <div class="service"><span>🧱</span>Izolatérství</div>
+    <div class="service">🪚 Tesařství</div>
+    <div class="service">🔨 Klempířství</div>
+    <div class="service">🏠 Pokrývačství</div>
+    <div class="service">🧱 Izolatérství</div>
   </div>
 </section>
 
-<section id="realizace" class="gallery-section">
-  <h2>Naše realizace</h2>
-  <p>Ukázky střech, krovů a detailů z našich prací.</p>
+<section id="kontakt" class="services">
+  <h2>Kontakt</h2>
 
-  <div class="gallery">
-    <div class="gallery-item"><img src="realizace1.png" alt="Realizace střechy"></div>
-    <div class="gallery-item"><img src="realizace1.jpeg" alt="Realizace střechy"></div>
-    <div class="gallery-item"><img src="realizace2.jpeg" alt="Realizace střechy"></div>
-    <div class="gallery-item"><img src="realizace3.jpeg" alt="Realizace střechy"></div>
-    <div class="gallery-item"><img src="realizace4.png" alt="Realizace střechy"></div>
-    <div class="gallery-item"><img src="realizace5.jpeg" alt="Realizace střechy"></div>
-    <div class="gallery-item"><img src="realizace6.jpeg" alt="Realizace střechy"></div>
-    <div class="gallery-item"><img src="realizace7.jpeg" alt="Realizace střechy"></div>
-  </div>
+  <p>📞 601 343 327</p>
+  <p>✉ strechyprodec@seznam.cz</p>
+
+  <p>
+    <a class="instagram-link" href="https://www.instagram.com/strechy_prodec/" target="_blank">
+
+      <svg class="instagram-icon" viewBox="0 0 24 24">
+        <defs>
+          <linearGradient id="ig" x1="0%" y1="100%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#feda75"/>
+            <stop offset="25%" stop-color="#fa7e1e"/>
+            <stop offset="50%" stop-color="#d62976"/>
+            <stop offset="75%" stop-color="#962fbf"/>
+            <stop offset="100%" stop-color="#4f5bd5"/>
+          </linearGradient>
+        </defs>
+        <rect x="2" y="2" width="20" height="20" rx="6" fill="url(#ig)"/>
+        <circle cx="12" cy="12" r="4" stroke="white" stroke-width="2" fill="none"/>
+        <circle cx="17" cy="7" r="1" fill="white"/>
+      </svg>
+
+      STŘECHY PRODĚC
+    </a>
+  </p>
+
 </section>
-
-<section id="kontakt" class="contact">
-  <div class="contact-wrap">
-
-    <div class="contact-card">
-      <h2>Kontakt</h2>
-      <p>Ozvěte se nám a domluvíme se na dalším postupu.</p>
-
-      <div class="contact-line"><strong>Kontaktní osoba</strong>Tomáš Prodělal</div>
-      <div class="contact-line"><strong>Telefon</strong><a href="tel:+420601343327">601 343 327</a></div>
-      <div class="contact-line"><strong>Email</strong><a href="mailto:strechyprodec@seznam.cz">strechyprodec@seznam.cz</a></div>
-      <div class="contact-line"><strong>Instagram</strong><a href="https://www.instagram.com/strechy_prodec/" target="_blank" rel="noopener">STŘECHY PRODĚC</a></div>
-      <div class="contact-line"><strong>Adresa a oblast působení</strong>Šumná 27 · Znojmo a široké okolí</div>
-    </div>
-
-    <div class="contact-card">
-      <h2>Nezávazná poptávka</h2>
-      <p>Popište nám, co potřebujete. Čím více informací pošlete, tím lépe se domluvíme.</p>
-
-      <form action="https://formsubmit.co/strechyprodec@seznam.cz" method="POST">
-        <input type="hidden" name="_subject" value="Nová poptávka z webu Střechy Proděc">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_captcha" value="true">
-        <input type="text" name="_honey" class="hidden-field">
-
-        <div class="form-grid">
-          <div class="form-field">
-            <label>Jméno *</label>
-            <input type="text" name="Jméno" placeholder="Vaše jméno" required>
-          </div>
-
-          <div class="form-field">
-            <label>Email *</label>
-            <input type="email" name="Email" placeholder="vas@email.cz" required>
-          </div>
-        </div>
-
-        <div class="form-grid">
-          <div class="form-field">
-            <label>Telefon</label>
-            <input type="tel" name="Telefon" placeholder="601 343 327">
-          </div>
-
-          <div class="form-field">
-            <label>Lokalita *</label>
-            <input type="text" name="Lokalita" placeholder="Město / obec" required>
-          </div>
-        </div>
-
-        <div class="form-field">
-          <label>Co potřebujete? *</label>
-          <textarea name="Zpráva" placeholder="Např. nová střecha, oprava, rekonstrukce, klempířské práce, izolace..." required></textarea>
-        </div>
-
-        <label class="gdpr-check">
-          <input type="checkbox" required>
-          <span>Souhlasím se zpracováním osobních údajů za účelem vyřízení poptávky. Více v dokumentu <a href="gdpr.html">Ochrana osobních údajů</a>.</span>
-        </label>
-
-        <button class="submit-btn" type="submit">Odeslat poptávku</button>
-      </form>
-    </div>
-
-  </div>
-</section>
-
-<div class="lightbox" id="lightbox">
-  <span onclick="closeLightbox()">&times;</span>
-  <img id="lightbox-img" src="" alt="">
-</div>
-
-<footer class="footer">
-  <div class="footer-wrap">
-    <div>
-      <h3>Střechy Proděc</h3>
-      <p>Tesařství • Klempířství • Pokrývačství • Izolatérství</p>
-      <p>Vše kolem střech ve Znojmě a širokém okolí.</p>
-    </div>
-
-    <div>
-      <h3>Kontakt</h3>
-      <p>📞 <a href="tel:+420601343327">601 343 327</a></p>
-      <p>✉ <a href="mailto:strechyprodec@seznam.cz">strechyprodec@seznam.cz</a></p>
-      <p>📍 Šumná 27 · Znojmo a široké okolí</p>
-    </div>
-
-    <div>
-      <h3>Informace</h3>
-      <p>
-        <a class="instagram-link" href="https://www.instagram.com/strechy_prodec/" target="_blank" rel="noopener">
-          <svg class="instagram-icon" viewBox="0 0 24 24" aria-hidden="true">
-            <defs>
-              <linearGradient id="igGradient" x1="0%" y1="100%" x2="100%" y2="0%">
-                <stop offset="0%" stop-color="#feda75"/>
-                <stop offset="25%" stop-color="#fa7e1e"/>
-                <stop offset="50%" stop-color="#d62976"/>
-                <stop offset="75%" stop-color="#962fbf"/>
-                <stop offset="100%" stop-color="#4f5bd5"/>
-              </linearGradient>
-            </defs>
-            <rect x="2" y="2" width="20" height="20" rx="6" fill="url(#igGradient)"/>
-            <circle cx="12" cy="12" r="4.2" fill="none" stroke="white" stroke-width="2"/>
-            <circle cx="17.3" cy="6.7" r="1.2" fill="white"/>
-          </svg>
-          STŘECHY PRODĚC
-        </a>
-      </p>
-      <p><a href="gdpr.html">Ochrana osobních údajů a cookies</a></p>
-      <p><a href="#kontakt">Nezávazná poptávka</a></p>
-    </div>
-  </div>
-
-  <div class="footer-bottom">
-    © 2026 Střechy Proděc. Všechna práva vyhrazena.
-  </div>
-</footer>
-
-<div class="cookie-banner" id="cookieBanner">
-  <div class="cookie-inner">
-    <p>
-      Tento web nepoužívá analytické ani marketingové cookies. Ukládáme pouze vaši volbu této lišty do prohlížeče.
-      Více najdete v části <a href="gdpr.html" style="color:#9ed8bf;">Ochrana osobních údajů a cookies</a>.
-    </p>
-    <div class="cookie-actions">
-      <button class="cookie-btn cookie-decline" onclick="saveCookieChoice('declined')">Rozumím</button>
-      <button class="cookie-btn cookie-accept" onclick="saveCookieChoice('accepted')">Souhlasím</button>
-    </div>
-  </div>
-</div>
-
-<script>
-const galleryImages = document.querySelectorAll('.gallery-item img');
-const lightbox = document.getElementById('lightbox');
-const lightboxImg = document.getElementById('lightbox-img');
-
-galleryImages.forEach(img => {
-  img.addEventListener('click', () => {
-    lightbox.style.display = 'flex';
-    lightboxImg.src = img.src;
-  });
-});
-
-function closeLightbox() {
-  lightbox.style.display = 'none';
-}
-
-lightbox.addEventListener('click', (e) => {
-  if (e.target === lightbox) closeLightbox();
-});
-
-const cookieBanner = document.getElementById('cookieBanner');
-const cookieChoice = localStorage.getItem('cookieChoice');
-
-if (!cookieChoice) {
-  cookieBanner.style.display = 'block';
-}
-
-function saveCookieChoice(choice) {
-  localStorage.setItem('cookieChoice', choice);
-  cookieBanner.style.display = 'none';
-}
-</script>
 
 </body>
 </html>
