@@ -7,7 +7,7 @@
 
   <style>
     html { scroll-behavior: smooth; }
-    body { margin:0; font-family: Arial, sans-serif; }
+    body { margin:0; font-family: Arial, sans-serif; background:#f7fbf8; }
 
     header {
       position: sticky;
@@ -52,9 +52,10 @@
 
     .brand span {
       display:block;
-      font-size:13px;
+      font-size:12px;
       color:#5b7b72;
       font-weight:bold;
+      line-height:1.3;
     }
 
     nav {
@@ -186,6 +187,86 @@
       color:#4c6268;
     }
 
+    .about {
+      max-width:none;
+      background:linear-gradient(135deg, #f7fbf8 0%, #e9f5ef 100%);
+    }
+
+    .about-inner {
+      max-width:1100px;
+      margin:auto;
+      display:grid;
+      grid-template-columns:0.9fr 1.1fr;
+      gap:34px;
+      align-items:center;
+    }
+
+    .about-badge {
+      display:inline-block;
+      background:#e1f1e9;
+      color:#195f6f;
+      padding:9px 14px;
+      border-radius:999px;
+      font-weight:bold;
+      font-size:14px;
+      margin-bottom:14px;
+    }
+
+    .about-card {
+      background:white;
+      border:1px solid #dce9e3;
+      border-radius:28px;
+      padding:34px;
+      box-shadow:0 18px 45px rgba(18,63,74,0.10);
+      position:relative;
+      overflow:hidden;
+    }
+
+    .about-card:before {
+      content:"";
+      position:absolute;
+      top:0;
+      left:0;
+      width:8px;
+      height:100%;
+      background:#195f6f;
+    }
+
+    .about-card p {
+      margin-top:0;
+    }
+
+    .about-card p:last-child {
+      margin-bottom:0;
+    }
+
+    .about-side {
+      background:#123f4a;
+      color:white;
+      border-radius:28px;
+      padding:34px;
+      box-shadow:0 18px 45px rgba(18,63,74,0.18);
+    }
+
+    .about-side h3 {
+      font-size:28px;
+      margin:0 0 18px;
+    }
+
+    .about-points {
+      display:grid;
+      gap:14px;
+      margin-top:22px;
+    }
+
+    .about-point {
+      background:rgba(255,255,255,0.10);
+      border:1px solid rgba(255,255,255,0.16);
+      border-radius:18px;
+      padding:16px;
+      font-weight:bold;
+    }
+
     .dark {
       background:#123f4a;
       color:white;
@@ -234,6 +315,7 @@
       padding:22px;
       border-top:1px solid #ddd;
       color:#5b6d72;
+      background:white;
     }
 
     @media (max-width: 900px) {
@@ -271,6 +353,10 @@
       .hero p { font-size:18px; }
 
       section { padding:55px 18px; }
+
+      .about-inner {
+        grid-template-columns:1fr;
+      }
     }
 
     @media (max-width: 480px) {
@@ -280,7 +366,7 @@
       }
 
       .brand strong { font-size:18px; }
-      .brand span { font-size:12px; }
+      .brand span { font-size:11px; }
 
       nav a {
         font-size:13px;
@@ -301,6 +387,12 @@
       }
 
       .cards { grid-template-columns:1fr; }
+
+      .about-card,
+      .about-side {
+        padding:24px;
+        border-radius:22px;
+      }
     }
   </style>
 </head>
@@ -313,7 +405,7 @@
       <img src="logo.jpg" alt="logo">
       <div>
         <strong>Střechy Proděc</strong>
-        <span>Pokrývačské služby</span>
+        <span>Tesařství • Klempířství • Pokrývačství • Izolatérství</span>
       </div>
     </a>
 
@@ -334,7 +426,7 @@
 
   <div class="hero-content">
     <h1>Kvalitní střechy bez starostí</h1>
-    <p>Pokrývačské práce ve Znojmě a širokém okolí</p>
+    <p>Vše kolem střech ve Znojmě a širokém okolí</p>
 
     <div class="benefits">
       <div>✔ Poctivá práce</div>
@@ -346,13 +438,41 @@
   </div>
 </section>
 
-<section id="omne">
-  <h2>O mně</h2>
-  <p>
-    Jmenuji se Tomáš Prodělal a zabývám se pokrývačskými pracemi.
-    Nabízím kvalitní a poctivou práci se zaměřením na spokojenost zákazníka.
-    Působím ve Znojmě a širokém okolí.
-  </p>
+<section id="omne" class="about">
+  <div class="about-inner">
+    <div>
+      <span class="about-badge">O mně</span>
+      <h2>Střecha, na kterou se můžete spolehnout</h2>
+      <p>
+        Zakládám si na poctivé práci, jasné domluvě a výsledku, který vydrží.
+        Každou střechu beru jako vlastní vizitku.
+      </p>
+    </div>
+
+    <div class="about-card">
+      <p>
+        Střechy jsou moje práce i moje jistota. Dělám kompletní realizace,
+        rekonstrukce i opravy a vždycky si hlídám každý detail, protože právě ty
+        rozhodují o tom, jak dlouho střecha vydrží. Pracuju poctivě, čistě a bez
+        zkratek — tak, jak bych to dělal i pro sebe.
+      </p>
+      <p>
+        Měřítkem úspěchu je pro mě spokojený zákazník a střecha, na kterou se
+        může spolehnout. Zakládám si na férovém jednání, jasné domluvě a práci,
+        která obstojí v čase. Chci, aby každý věděl, že když mi svěří střechu,
+        dostane kvalitní výsledek a klid v hlavě.
+      </p>
+    </div>
+
+    <div class="about-side">
+      <h3>Na čem si dávám záležet</h3>
+      <div class="about-points">
+        <div class="about-point">✔ Pečlivé provedení každého detailu</div>
+        <div class="about-point">✔ Čistá práce bez zbytečných zkratek</div>
+        <div class="about-point">✔ Férová domluva od začátku do konce</div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section id="sluzby">
